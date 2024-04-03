@@ -66,7 +66,7 @@
                                 class="menu-arrow"></span></a>
                         <ul style="">
                             <li class="">
-                                <a href="{{route('admin.asks.index')}}"> <span>Danh sách câu hỏi</span></a>
+                                <a href="{{route('admin.videos.index')}}"> <span>Danh sách câu hỏi</span></a>
                             </li>
                         </ul>
                     </li>

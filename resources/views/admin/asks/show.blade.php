@@ -43,7 +43,7 @@
                                 <div class="form-group text-center">
                                     <button class="btn btn-primary mr-2">Trả lời</button>
                                 </div>
-                                <a class="btn-back" href="{{ route('asks.index') }}"><i class="fas fa-arrow-circle-left"
+                                <a class="btn-back" href="{{ route('admin.asks.index') }}"><i class="fas fa-arrow-circle-left"
                                         id="back-icon"></i>Trở về</a>
                             </div>
                         </div>

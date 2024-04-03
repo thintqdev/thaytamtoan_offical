@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="content-page">
-        <form action="{{ route('asks.index') }}" method="get">
+        <form action="{{ route('admin.asks.index') }}" method="get">
             <div class="row filter-row">
                 <div class="col-sm-6 col-md-6">
                     <div class="form-group form-focus">
@@ -64,7 +64,7 @@
                                     {{ $ask->user->full_name}}
                                 </td>
                                 <td>
-                                    <a href="{{ route('asks.show', ['ask' => $ask]) }}" class="btn btn-primary btn-sm mb-1">
+                                    <a href="{{ route('admin.asks.show', ['ask' => $ask]) }}" class="btn btn-primary btn-sm mb-1">
                                         <i class="far fa-eye"></i>
                                     </a>
                                     <button type="submit" data-toggle="modal" data-target="#delete_ask_{{ $ask->id }}"
@@ -79,7 +79,7 @@
                                         <div class="modal-header">
                                             <h4 class="modal-title">Xoá câu hỏi của {{ $ask->user->full_name }}</h4>
                                         </div>
-                                        <form method="POST" action="{{ route('asks.destroy', ['ask' => $ask]) }}">
+                                        <form method="POST" action="{{ route('admin.asks.destroy', ['ask' => $ask]) }}">
                                             @csrf
                                             @method('delete')
                                             <div class="modal-body">

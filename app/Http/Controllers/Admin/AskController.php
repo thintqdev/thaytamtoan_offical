@@ -28,7 +28,7 @@ class AskController extends Controller
             $asks->where('category_id', $category_id);
         }
         $asks = $asks->get();
-        return view('asks.index', compact('asks', 'categories'));
+        return view('admin.asks.index', compact('asks', 'categories'));
     }
 
     /**
@@ -54,7 +54,7 @@ class AskController extends Controller
     {
 
         $categories = Category::all();
-        return view('asks.show', compact('ask', 'categories'));
+        return view('admin.asks.show', compact('ask', 'categories'));
     }
 
     /**
@@ -79,6 +79,6 @@ class AskController extends Controller
     public function destroy(Ask $ask)
     {
         $ask->delete();
-        return redirect()->route('asks.index');
+        return redirect()->route('admin.asks.index');
     }
 }
