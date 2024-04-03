@@ -5,12 +5,12 @@
         <div class="col-sm-4 col-12">
         </div>
         <div class="col-sm-8 col-12 text-right add-btn-col">
-            <a href="{{ route('videos.create') }}" class="btn btn-primary btn-rounded float-right"><i
+            <a href="{{ route('admin.videos.create') }}" class="btn btn-primary btn-rounded float-right"><i
                     class="fas fa-plus"></i> Thêm video bài giảng </a>
         </div>
     </div>
     <div class="content-page">
-        <form action="{{ route('videos.index') }}" method="get">
+        <form action="{{ route('admin.videos.index') }}" method="get">
             <div class="row filter-row">
                 <div class="col-sm-6 col-md-6">
                     <div class="form-group form-focus">
@@ -64,7 +64,7 @@
                                             class="btn btn-info btn-sm mb-1">
                                         <i class="far fa-eye"></i>
                                     </button>
-                                    <a href="{{ route('videos.edit', ['video' => $video]) }}"
+                                    <a href="{{ route('admin.videos.edit', ['video' => $video]) }}"
                                        class="btn btn-primary btn-sm mb-1">
                                         <i class="far fa-edit"></i>
                                     </a>
@@ -81,7 +81,7 @@
                                         <div class="modal-header">
                                             <h4 class="modal-title">Xoá video này</h4>
                                         </div>
-                                        <form method="POST" action="{{ route('videos.destroy', ['video' => $video]) }}">
+                                        <form method="POST" action="{{ route('admin.videos.destroy', ['video' => $video]) }}">
                                             @csrf
                                             @method('delete')
                                             <div class="modal-body">

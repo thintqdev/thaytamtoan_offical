@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <form action="{{ route('exams.update', ['exam' => $exam]) }}" method="post"
+                                <form action="{{ route('admin.exams.update', ['exam' => $exam]) }}" method="post"
                                       enctype="multipart/form-data">
                                     @csrf
                                     @method('put')

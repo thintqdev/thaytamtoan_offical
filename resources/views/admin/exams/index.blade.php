@@ -6,12 +6,12 @@
         <div class="col-sm-4 col-12">
         </div>
         <div class="col-sm-8 col-12 text-right add-btn-col">
-            <a href="{{ route('exams.create') }}" class="btn btn-primary btn-rounded float-right"><i
+            <a href="{{ route('admin.exams.create') }}" class="btn btn-primary btn-rounded float-right"><i
                     class="fas fa-plus"></i> Thêm đề thi </a>
         </div>
     </div>
     <div class="content-page">
-        <form action="{{ route('exams.index') }}" method="get">
+        <form action="{{ route('admin.exams.index') }}" method="get">
             <div class="row filter-row">
                 <div class="col-sm-6 col-md-6">
                     <div class="form-group form-focus">
@@ -65,7 +65,7 @@
                                     @endif
                                 </td>
                                 <td class="text-right">
-                                    <a href="{{ route('exams.edit', ['exam' => $exam]) }}"
+                                    <a href="{{ route('admin.exams.edit', ['exam' => $exam]) }}"
                                        class="btn btn-primary btn-sm mb-1">
                                         <i class="far fa-edit"></i>
                                     </a>
@@ -82,7 +82,7 @@
                                         <div class="modal-header">
                                             <h4 class="modal-title">Xoá đề thi này</h4>
                                         </div>
-                                        <form method="POST" action="{{ route('exams.destroy', ['exam' => $exam]) }}">
+                                        <form method="POST" action="{{ route('admin.exams.destroy', ['exam' => $exam]) }}">
                                             @csrf
                                             @method('delete')
                                             <div class="modal-body">

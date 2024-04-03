@@ -33,7 +33,7 @@ class VideoController extends Controller
         }
 
         $videos = $videos->get();
-        return view('videos.index', compact('videos', 'categories'));
+        return view('admin.videos.index', compact('videos', 'categories'));
     }
 
     /**
@@ -42,7 +42,7 @@ class VideoController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('videos.create', compact('categories'));
+        return view('admin.videos.create', compact('categories'));
     }
 
     /**
@@ -60,7 +60,7 @@ class VideoController extends Controller
 
         $videos = Video::create($data);
 
-        return redirect()->route('videos.index');
+        return redirect()->route('admin.videos.index');
     }
 
     /**
@@ -70,7 +70,7 @@ class VideoController extends Controller
     {
         $categories = Category::all();
 
-        return view('videos.edit', compact('categories', 'video'));
+        return view('admin.videos.edit', compact('categories', 'video'));
     }
 
     /**
@@ -97,7 +97,7 @@ class VideoController extends Controller
 
         $video->update($data);
 
-        return redirect()->route('videos.index');
+        return redirect()->route('admin.videos.index');
     }
 
 
@@ -108,6 +108,6 @@ class VideoController extends Controller
     {
         $video->delete();
 
-        return redirect()->route('videos.index');
+        return redirect()->route('admin.videos.index');
     }
 }

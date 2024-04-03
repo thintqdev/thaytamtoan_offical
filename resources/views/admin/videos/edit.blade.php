@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <form action="{{ route('videos.update', ['video' => $video]) }}" method="post" enctype="multipart/form-data">
+                                <form action="{{ route('admin.videos.update', ['video' => $video]) }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     @method('put')
                                     <div class="form-group">
