@@ -62,7 +62,7 @@ jobs:
             Avoid commenting on sections where no issues are present.
             If additional comments are not questions directed to you, refrain from adding comments.
           summarize: |
-              Provide your response in both English and Vietnamese using markdown format with the following content:
+              Provide your response in both Vietnamese using markdown format with the following content:
                 - *Walkthrough*: Summarize changes for the entire modification in less than 200 characters, not specific to any particular file.
                 - *Changes*: Describe how processing has been altered for the file.
               Please avoid additional comments in this summary, as it will be added as a comment on GitHub pull requests.
