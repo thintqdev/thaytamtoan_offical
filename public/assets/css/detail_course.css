@@ -1,0 +1,55 @@
+.card-body {
+    padding: 0 !important;
+}
+
+.col-md-8 {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.col-md-8 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    /* margin-bottom: 10px; */
+}
+
+.text-dark {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.submenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    transition: max-height 0.3s ease;
+}
+
+.submenu-item {
+    /* margin-bottom: 5px; */
+}
+
+.menu-container .active {
+    background-color: #ddd;
+}

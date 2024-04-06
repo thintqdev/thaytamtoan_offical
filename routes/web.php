@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Front\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::middleware('guest')->group(function () {
+    Route::get('login', [AuthController::class, 'loginView'])->name('login');
+    Route::get('register', [AuthController::class, 'registerView'])->name('register');
+    Route::get('forgot-password', [AuthController::class, 'forgotPasswordView'])->name('forgot.password');
+    Route::get('reset-password', [AuthController::class, 'passwordResetView'])->name('password.reset');
+ });

@@ -1,0 +1,46 @@
+
+.cover-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(56, 77, 196, 0.822), rgba(96, 131, 245, 0.753)), url('https://c4.wallpaperflare.com/wallpaper/131/921/123/formula-math-mathematics-physics-wallpaper-preview.jpg');
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.question {
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.question > .btn-love, .btn-save, .btn-share, .btn-accept {
+    background-color: #fff!important;
+}
+
+.btn-accept {
+    border: 1px solid #28a745;
+    color: #28a745;
+}
+
+.btn-accept:hover {
+    color: #fff;
+    background-color: #28a745!important;
+}
+
+.btn-love:hover, .btn-report:hover {
+    color: #ff2d55;
+}
+
+.list-answer {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.accept-answer {
+    background: #dff0d8;
+    color: #fff;
+}
+
+.text-accept-answer {
+    background: #28a745;
+}

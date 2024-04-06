@@ -1,0 +1,44 @@
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: '>\00a0';
+    color: #000;
+    font-weight: 600;
+}
+
+.card-header {
+    background-color: #fff;
+    color: #007bff;
+    text-align: center;
+}
+
+.card-header h4 {
+    margin-bottom: 0;
+}
+
+.document-content {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 0;
+}
+
+.btn-pdf, .btn-word {
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: #007bff;
+}
+
+.btn-word {
+    color: #007bff;
+}
+
+.btn-pdf {
+    color: #ff0000;
+}
+
+i {
+    font-size: 20px;
+}
