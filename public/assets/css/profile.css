@@ -1,0 +1,51 @@
+/* Profile Image Section */
+.profile-img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#profileImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+#profileImage:hover {
+    transform: scale(1.1);
+}
+
+/* Profile Content Section */
+.profile-content {
+    text-align: center;
+}
+
+/* Personal Information Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Card Styling */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container Styling */
+.profile-screen {
+    padding: 20px;
+    border-radius: 10px;
+}

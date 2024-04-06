@@ -1,0 +1,19 @@
+.login-screen {
+  padding: 20px 0;
+}
+
+.login-screen form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-screen .form-control {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.login-screen .btn {
+  border-radius: 5px;
+}

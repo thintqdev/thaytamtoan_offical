@@ -1,0 +1,42 @@
+.form-row {
+    margin-bottom: 20px;
+}
+
+/* Định dạng dropdown và nút tìm kiếm */
+.custom-select,
+.btn {
+    border-radius: 0;
+    /* Loại bỏ góc bo tròn */
+}
+
+.custom-select {
+    border-radius: 0;
+    /* Loại bỏ góc bo tròn */
+}
+
+/* Định dạng checkbox và label */
+.custom-checkbox .custom-control-label::before,
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    border-radius: 0;
+    /* Loại bỏ góc bo tròn */
+}
+
+.btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+/* Hiệu ứng hover cho nút tìm kiếm */
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.fa-search {
+    margin-right: 5px;
+}
+
+.card-title {
+    margin-bottom: 1rem!important;
+}

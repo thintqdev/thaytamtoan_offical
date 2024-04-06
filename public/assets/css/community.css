@@ -1,0 +1,83 @@
+.cover-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(56, 77, 196, 0.822), rgba(96, 131, 245, 0.753)), url('https://c4.wallpaperflare.com/wallpaper/131/921/123/formula-math-mathematics-physics-wallpaper-preview.jpg');
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.background-blue {
+    background-color: #007bff;
+}
+
+h6.text-center {
+    color: #fff;
+}
+
+.active-member {
+    border-radius: 0 !important;
+}
+
+.golden {
+    border: 1px solid #FFD700;
+}
+
+.silver {
+    border: 1px solid #C0C0C0;
+}
+
+.bronze {
+    border: 1px solid #CD7F32;
+}
+
+.create-question a {
+    width: 100%;
+    border-radius: 0 !important;
+}
+
+.create-question a:hover {
+    background-color: #1e84f1;
+    border-color: #1e84f1;
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+    margin-top: 20px;
+}
+
+.nav-tabs > .nav-item {
+    margin-bottom: 0;
+}
+
+.nav-tabs > .nav-link {
+    color: #495057;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0;
+}
+
+.nav-link.active {
+    color: #fff !important;
+    background-color: #007bff !important;
+    border-color: #dee2e6 #dee2e6 #007bff !important;
+    border-bottom: 2px solid #007bff !important;
+}
+
+.question {
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-save, .btn-share, .btn-love {
+    background-color: #fff!important;
+}
+
+.btn-love:hover, .btn-report:hover {
+    color: #ff2d55;
+}
+
+.btn-save:hover, .btn-share:hover {
+    color: #007bff;
+}

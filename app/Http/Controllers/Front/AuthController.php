@@ -7,13 +7,23 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    public function login()
+    public function loginView()
     {
         return view('front.auth.login');
     }
 
-    public function register()
+    public function registerView()
     {
         return view('front.auth.register');
+    }
+
+    public function forgotPasswordView()
+    {
+        return view('front.auth.forgot_password');
+    }
+
+    public function passwordResetView()
+    {
+        return view('front.auth.reset_password');
     }
 }
