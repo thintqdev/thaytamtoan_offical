@@ -1,0 +1,68 @@
+name: Code Review
+
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  pull_request_review_comment:
+    types: [created]
+  issue_comment:
+    types: [created]
+
+concurrency:
+  group:
+    ${{ github.repository }}-${{ github.event.number || github.head_ref ||
+    github.sha }}-${{ github.workflow }}-${{ github.event_name ==
+    'pull_request_review_comment' && 'pr_comment' || 'pr' }}
+  cancel-in-progress: ${{ github.event_name != 'pull_request_review_comment' }}
+
+jobs:
+  review:
+    if: ${{ github.event.pull_request.base.ref == 'develop' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: coderabbitai/ai-pr-reviewer@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          BASE_URL: ${{ secrets.BASE_URL }}
+        with:
+          debug: false
+          review_simple_changes: false
+          review_comment_lgtm: false
+          openai_light_model: gpt-3.5-turbo-0125
+          openai_heavy_model: gpt-4
+          openai_timeout_ms: 900000
+          language: en-US
+          openai_base_url: ${{ secrets.BASE_URL }}
+          path_filters: |
+            !vendor/**
+            !**/*.lock
+            !public/**
+            !.github/**/**
+            !*.yml
+            !node_modules
+          system_message: |
+            As an experienced software engineer, please review the code from the following perspectives:
+              - Readability
+              - Reusability
+              - Security
+              - Performance
+              - Spelling and typos
+              - Logic code
+              - Coding convention apply PHP Standards Recommendations review name function, variable, class, ...
+              - Always define numbers into enums or variables
+              - Don't skip any file with small change, please check all functions related to that change.
+            Keep in mind that the person being reviewed is a beginner, so focus on fundamental aspects.
+            Do not comment on minor code style issues or the absence of comments/documentation.
+            Avoid commenting on sections where no issues are present.
+            If additional comments are not questions directed to you, refrain from adding comments.
+          summarize: |
+              Provide your response in both English and Vietnamese using markdown format with the following content:
+                - *Walkthrough*: Summarize changes for the entire modification in less than 200 characters, not specific to any particular file.
+                - *Changes*: Describe how processing has been altered for the file.
+              Please avoid additional comments in this summary, as it will be added as a comment on GitHub pull requests.
