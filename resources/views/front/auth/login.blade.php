@@ -25,7 +25,7 @@
                     <button type="submit" class="btn btn-primary">Đăng nhập</button>
                 </div>
                 <div class="form-group text-center">
-                    <p>Bạn chưa có tài khoản? <a href="/register.html">Đăng ký</a></p>
+                    <p>Bạn chưa có tài khoản? <a href="{{ route('front.register') }}">Đăng ký</a></p>
                 </div>
             </form>
         </div>

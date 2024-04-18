@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('guest')->group(function () {
     Route::get('login', [AuthController::class, 'loginView'])->name('login');
     Route::get('register', [AuthController::class, 'registerView'])->name('register');
-    Route::get('forgot-password', [AuthController::class, 'forgotPasswordView'])->name('forgot.password');
-    Route::get('reset-password', [AuthController::class, 'passwordResetView'])->name('password.reset');
+    Route::get('forgot-password', [AuthController::class, 'forgotPasswordView'])->name('forgot_password');
+    Route::get('reset-password', [AuthController::class, 'passwordResetView'])->name('password_reset');
  });
