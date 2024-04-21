@@ -9,17 +9,18 @@
 <div class="container login-screen">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <form>
+            <form action="{{ route('front.post.login') }}" method="post">
+                @csrf
                 <div class="form-group">
                     <h2 class="text-center">Đăng nhập tài khoản</h2>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Nhập email">
+                    <input type="email" class="form-control" name="email" placeholder="Nhập email">
                 </div>
                 <div class="form-group">
                     <label for="password">Mật khẩu</label>
-                    <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
+                    <input type="password" class="form-control" name="password" placeholder="Nhập mật khẩu">
                 </div>
                 <div class="form-group text-center">
                     <button type="submit" class="btn btn-primary">Đăng nhập</button>

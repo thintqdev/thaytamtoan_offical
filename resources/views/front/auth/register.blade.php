@@ -9,29 +9,30 @@
     <div class="container register-screen">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <form>
+                <form action="{{ route('front.post.register') }}" method="post">
+                    @csrf
                     <div class="form-group">
                         <h2 class="text-center">Đăng ký tài khoản mới</h2>
                     </div>
                     <div class="form-group">
                         <label for="fullName">Họ và tên</label>
-                        <input type="text" class="form-control" id="fullName" placeholder="Nhập họ và tên">
+                        <input type="text" class="form-control" name="full_name" placeholder="Nhập họ và tên">
                     </div>
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Nhập username">
+                        <input type="text" class="form-control" name="username" placeholder="Nhập username">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Nhập email">
+                        <input type="email" class="form-control" name="email" placeholder="Nhập email">
                     </div>
                     <div class="form-group">
                         <label for="password">Mật khẩu</label>
-                        <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
+                        <input type="password" class="form-control" name="password" placeholder="Nhập mật khẩu">
                     </div>
                     <div class="form-group">
                         <label for="confirmPassword">Xác nhận mật khẩu</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+                        <input type="password" class="form-control" name="password_confirmation" placeholder="Nhập lại mật khẩu">
                     </div>
                     <div class="form-group text-right">
                         <a href="{{ route('front.forgot_password') }}">Quên mật khẩu?</a>

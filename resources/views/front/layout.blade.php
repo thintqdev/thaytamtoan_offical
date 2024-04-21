@@ -14,33 +14,33 @@
     @yield('head')
 
     <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('assets/js/toast-plugin.js') }}"></script>
+    <script src="{{ asset('assets/js/toast-plugin-min.js') }}"></script>
 
 </head>
 
 <body>
-  <!-- Header -->
-  @section('header')
-  @include('front.components.header')
+    <!-- Header -->
+    @section('header')
+        @include('front.components.header')
     @show
 
-  <!-- Sidebar -->
+    <!-- Sidebar -->
     @section('sidebar')
-    @include('front.components.sidebar')
+        @include('front.components.sidebar')
     @show
-  <!-- Main content -->
-  @yield('content')
-  <!-- Footer -->
-  @section('footer')
-    @include('front.components.footer')
+    <!-- Main content -->
+    @yield('content')
+    <!-- Footer -->
+    @section('footer')
+        @include('front.components.footer')
     @show
 
-  <!-- End footer-->
-  <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- End footer-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ asset('assets/js/common.js') }}"></script>
 
-
-  <script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

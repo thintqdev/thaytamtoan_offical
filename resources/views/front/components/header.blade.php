@@ -24,7 +24,7 @@
             <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
 
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('front.home') }}">
             <h4 class="font-weight-bold">Thầy Tâm Toán</h4>
         </a>
 
@@ -46,7 +46,7 @@
             @auth
                 <div class="dropdown">
                     <div class="avatar-container" id="dropdownNotificationList" type="button">
-                        <img src="/assets/img/img-01.jpg" alt="Avatar" class="avatar">
+                        <img src="{{ !is_null($user) && $user->avatar_path ?  $user->avatar_path : 'https://static.vecteezy.com/system/resources/previews/026/434/409/non_2x/default-avatar-profile-icon-social-media-user-photo-vector.jpg' }}" alt="Avatar" class="avatar">
                         <div class="notification-badge">
                             <span class="badge badge-danger">3</span>
                         </div>
@@ -99,7 +99,7 @@
                     <div class="dropdown">
                         <span class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            Trần Quang Thìn
+                            {{ $user->full_name }}
                         </span>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="userDropdownMenu">
                             <!-- Nội dung dropdown menu cho dropdownMenuButton -->
@@ -109,7 +109,7 @@
                                 thi</a>
                             <a class="dropdown-item" href="/change_password.html"><i class="fa fa-key mr-2"></i>Đổi mật
                                 khẩu</a>
-                            <a class="dropdown-item" href="/logout.html"><i class="fa fa-door-open mr-2"></i>Đăng xuất</a>
+                            <a class="dropdown-item" href="{{ route('front.logout') }}"><i class="fa fa-door-open mr-2"></i>Đăng xuất</a>
                         </div>
                     </div>
 
