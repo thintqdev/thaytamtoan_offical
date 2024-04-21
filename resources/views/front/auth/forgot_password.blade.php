@@ -15,10 +15,11 @@
                         <div class="text-center lead">
                             <p>Vui lòng nhập email của bạn để lấy lại mật khẩu</p>
                         </div>
-                        <form>
+                        <form action="{{ route('front.post.forgot_password') }}" method="post">
+                            @csrf
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Nhập email của bạn">
+                                <input type="email" class="form-control" name="email" placeholder="Nhập email của bạn">
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary">Gửi</button>

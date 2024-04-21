@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-10 pl-0">
-            <a class="btn btn-primary" href="#"><i class="bx bxs-user-circle mr-1"></i> Đăng nhập</a>
+            <a class="btn btn-primary" href="{{ route('front.login') }}"><i class="bx bxs-user-circle mr-1"></i> Đăng nhập</a>
           </div>
 
           <div class="col-2 text-left">
@@ -17,7 +17,7 @@
 
     <ul class="list-unstyled components links">
       <li class="active">
-        <a href="#"><i class="fa fa-home"></i> Trang chủ</a>
+        <a href="{{ route('front.home') }}"><i class="fa fa-home"></i> Trang chủ</a>
       </li>
       <li>
         <a href="#"><i class="fa fa-book"></i> Tài liệu</a>
